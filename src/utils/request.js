@@ -1,5 +1,9 @@
 import axios from 'axios';
 axios.default.baseURL = 'http://localhost:9011'
+
+axios.postJson = (url,params={})=>axios.post(url,params,{headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+    }})
 const service = axios.create({
     // process.env.NODE_ENV === 'development' 来判断是否开发环境
     // easy-mock服务挂了，暂时不使用了
@@ -7,6 +11,7 @@ const service = axios.create({
     // baseURL: 'http://localhost:9011',
     timeout: 5000
 });
+
 
 service.interceptors.request.use(
     config => {
@@ -32,4 +37,5 @@ service.interceptors.response.use(
     }
 );
 
+export const axiosUtils = axios;
 export default service;
