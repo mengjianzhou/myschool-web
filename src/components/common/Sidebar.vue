@@ -63,6 +63,11 @@ export default {
                 },
                 {
                     icon: 'el-icon-lx-cascades',
+                    index: 'personInfo',
+                    title: '人员信息'
+                },
+                {
+                    icon: 'el-icon-lx-cascades',
                     index: 'table',
                     title: '账户信息'
                 },

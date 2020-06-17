@@ -30,6 +30,11 @@ export default new Router({
                     meta: { title: '账户信息' }
                 },
                 {
+                    path: '/personInfo',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/PersonInfo.vue'),
+                    meta: { title: '人员信息' }
+                },
+                {
                     path: '/tabs',
                     component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
                     meta: { title: 'tab选项卡' }
